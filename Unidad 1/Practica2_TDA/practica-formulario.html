@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	  <title>Practica Formularios con HTML</title>
+	  <link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+	<body>
+	  <h1 class="text-center">Registro Alumnos TESJI</h1>
+	<form>
+		<div class="container">
+			<div class="row">
+				<div class="col-6 text-center" >
+					<label class="form-label">Nombre</label>
+					<input type = "text" class="form-control" placeholder="Ingrese Nombre" name="txtNombre" >
+				  </div>
+				  <div class="col-6 text-center">
+					<label class="form-label">Telefono</label>
+					<input type = "text" class="form-control" name="txtTel" placeholder="Ingrese Telefono">
+				  </div>
+			  
+				  <div class="col-4 text-center">
+				  <label> Carrera </label>
+				  <select name="cmbCarrera" class="form-select"  size="1">
+					  <option value="No selecciono carrera">--Seleccione--</option>
+					  <option value="Ing. Sistemas">Ing. Sistemas</option>
+					  <option value="Ing. Industrial">Ing. Industrial</option>
+					  <option value="Ing. Mecatronica">Ing. Mecatronica</option>
+					  <option value="Ing. Civil">Ing. Civil</option>
+					  <option value="Ing. Logistica">Ing. Logistica</option>
+				  </select>
+				  </div>
+			  
+				  <div class="col-4 text-center">
+				  <label> Semestre </label>
+				  <select name="cmbSemestre" class="form-select"  size="1">
+					  <option value="No selecciono semestre">--Seleccione--</option>
+					  <option value="1ro">1ro</option>
+					  <option value="2do">2do</option>
+					  <option value="3ro">3ro</option>
+					  <option value="4to">4to</option>
+					  <option value="5to">5to</option>
+					  <option value="6to">6to</option>
+					  <option value="7to">7to</option>
+					  <option value="8o">8o</option>
+					  <option value="9o">9o</option>
+					  <option value="10o">10o</option>
+					  <option value="11o">11o</option>
+					  <option value="12o">12o</option>
+				  </select>
+				  </div>
+			  
+				  <div class="col-4 text-center">
+					 <label class="form-check-label" > Género </label>
+					 <input type="radio" class="form-check-input" name="rbGenero" value="Hombre" id="idrbhombre"><label for="idrbhombre">H</label>
+					 <input type="radio" class="form-check-input" name= "rbGenero" value="Mujer" id="idrbmujer"><label for="idrbmujer">M</label>
+				  </div>
+			  
+			</div>
+
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-2 text-center">
+					<button type="reset" class="btn btn-primary"> Cancelar </button>
+			</div>
+			<div class="col-4 text-center">
+				<button type="button" class="btn btn-primary" onclick="enviarDatos()"> Registrar </button>
+			</div>
+	
+		</div>
+			</div>
+	</form>
+		
+
+			</body>
+		</script>
+				<!--Enlazar el archivo js con html-->
+			<script src="js/funciones.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+		</html>
+	

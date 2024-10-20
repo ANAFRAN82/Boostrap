@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	  <title>Practica Formularios con HTML</title>
+	  <link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+	<body>
+	  <h1 class="text-center">BANCO PUEBLO DESCONOCIDO</h1>
+	<form>
+		<div class="container">
+			<div class="row">
+				<div class="bg-success col-12">
+					<h5></h5>
+				</div>
+				<div class="col-4 text-center" >
+					<label class="form-label">Nombre del Cliente</label>
+					<input type = "text" class="form-control" placeholder="Ingrese Nombre" name="txtNombre" >
+				</div>
+				<div class="col-4 text-center" >
+					<label class="form-label">Limite de Credito Actual</label>
+					<input type = "text" class="form-control" placeholder="Ingrese el limite de Credito Actual" name="txtLimiteCredito" >
+				  </div>			  
+				  <div class="col-4 text-center">
+				  <label> Tipo de Tarjeta </label>
+				  <select name="cmbTipoTarjeta" class="form-select"  size="1">
+					  <option value="No selecciono carrera">--Seleccione--</option>
+					  <option value="Tipo 1">Tipo 1</option>
+					  <option value="Tipo 2">Tipo 2</option>
+					  <option value="Tipo 3">Tipo 3</option>
+					  <option value="Otro Tipo">Otro Tipo</option>
+				  </select>
+				  </div>
+				  <div class="bg-success col-12">
+					<h5></h5>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-6 text-center">
+					<button type="reset" class="btn btn-outline-success"> Cancelar </button>
+			</div>
+			<div class="col-6 text-center">
+				<button type="button" class="btn btn-outline-success" onclick="enviarDatos()"> Calcular </button>
+			</div>
+
+		</div>
+			</div>
+	</form>
+			</body>
+		</script>
+				<!--Enlazar el archivo js con html-->
+			<script src="js/funciones.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+		</html>
+	

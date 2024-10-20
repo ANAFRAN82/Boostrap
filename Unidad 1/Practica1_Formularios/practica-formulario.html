@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	  <title>Practica Formularios con HTML</title>
+	  <link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="text-center">
+			<h1>Hola Mundo desde HTML</h1>
+			<h2>Practica con formularios</h2>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="bg-primary col-12">
+					<h5>Col 1</h5>
+				</div>
+				<div class="bg-warning col-6">
+					<h5>Col 2</h5>
+				</div>
+				<div class="bg-danger col-6">
+					<h5>Col 3</h5>
+				</div>
+				<div class="bg-success col-12">
+					<h5>Col 4</h5>
+				</div>
+			</div>
+
+		</div>
+	  
+	<!--
+	  <h3>Mi primera pagina web</h3>
+	  <h4>En la asignatura Estructura de Datos</h4>
+	  <h5>Alumno: Ana Cristina Franco Gonzalez</h5>
+	  <h6>TESJI Ingenieria en Sistemas Computacionales</h6>
+	-->
+	<form>
+		<div class="container">
+			<div class="row">
+				<div class="col-6 text-center" >
+					<label class="form-label">Nombre</label>
+					<input type = "text" class="form-control" placeholder="Ingrese Nombre" name="txtNombre" >
+				  </div>
+				  <div class="col-6 text-center">
+					<label class="form-label">Telefono</label>
+					<input type = "text" class="form-control" name="txtTel" placeholder="Ingrese Telefono">
+				  </div>
+			  
+				  <div class="col-4 text-center">
+				  <label> Carrera </label>
+				  <select name="cmbCarrera" class="form-select"  size="1">
+					  <option value="No selecciono carrera">--Seleccione--</option>
+					  <option value="Ing. Sistemas">Ing. Sistemas</option>
+					  <option value="Ing. Industrial">Ing. Industrial</option>
+					  <option value="Ing. Mecatronica">Ing. Mecatronica</option>
+					  <option value="Ing. Civil">Ing. Civil</option>
+					  <option value="Ing. Logistica">Ing. Logistica</option>
+				  </select>
+				  </div>
+			  
+				  <div class="col-4 text-center">
+				  <label> Semestre </label>
+				  <select name="cmbSemestre" class="form-select"  size="1">
+					  <option value="No selecciono semestre">--Seleccione--</option>
+					  <option value="1ro">1ro</option>
+					  <option value="2do">2do</option>
+					  <option value="3ro">3ro</option>
+					  <option value="4to">4to</option>
+					  <option value="5to">5to</option>
+					  <option value="6to">6to</option>
+					  <option value="7to">7to</option>
+					  <option value="8o">8o</option>
+					  <option value="9o">9o</option>
+					  <option value="10o">10o</option>
+					  <option value="11o">11o</option>
+					  <option value="12o">12o</option>
+				  </select>
+				  </div>
+			  
+				  <div class="col-4 text-center">
+					 <label class="form-check-label" > Género </label>
+					 <input type="radio" class="form-check-input" name="rbGenero" value="Hombre" id="idrbhombre"><label for="idrbhombre">H</label>
+					 <input type="radio" class="form-check-input" name= "rbGenero" value="Mujer" id="idrbmujer"><label for="idrbmujer">M</label>
+				  </div>
+			  
+			</div>
+
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-2 text-center">
+					<button type="reset" class="btn btn-primary"> Cancelar </button>
+			</div>
+			<div class="col-4 text-center">
+				<button type="button" class="btn btn-primary" onclick="enviarDatos()"> Registrar </button>
+			</div>
+			<div class="col-2 text-center">
+				<button type="button" class="btn btn-primary" onclick="saludar('Ana Franco')"> Saludar </button>
+			</div>
+			<div class="col-2 text-center">
+				<button type="button" class="btn btn-primary" onclick="saludar2()"> Saludar2 </button>
+			</div>
+			<div class="col-2 text-center">
+				<button type="button" class="btn btn-primary" onclick="variables()"> Variables</button>
+			</div>
+
+
+		</div>
+			</div>
+	</form>
+		
+			<script>
+				//modAcceso datoRetorno nombreMetodo(parametros){
+				//	Instrucciones
+				// return
+				//}
+				function saludar(nombre){
+					alert("Hola Mundo\n Bienvenido " + nombre + " a javascript");
+					let an=prompt("Ingrese su año de nacimiento");
+					let currentTime = new Date();
+					let year = currentTime.getFullYear();
+					let edad = calcularEdad(an,year);
+					alert("Tu edad es: " + edad);
+				}
+				// No es una buena practica utilizar javascript directamente 
+				// en documento html
+				// ArrowFunction ->
+				const calcularEdad=(anioNacim, anioActual)=>{
+					return anioActual-anioNacim;	
+			}
+			const enviarDatos=()=>{
+				let nombre = document.getElementsByName('txtNombre')[0].value
+				let tel= parseInt(document.getElementsByName("txtTel")[0].value);
+				let carrera=document.getElementsByName('cmbCarrera')[0].value;
+				let semestre=document.getElementsByName('cmbSemestre')[0].value;
+				let genero= document.querySelector("input[name='rbGenero']:checked").value;
+				alert(`Nombre: ${nombre}\n
+					   Telefono: ${tel+1}
+					   Carrera: ${carrera}
+					   Semestre ${semestre}
+					   Genero: ${genero}`);
+			}
+			</script>
+			</body>
+		</script>
+				<!--Enlazar el archivo js con html-->
+			<script src="js/funciones.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+		</html>
+	
